@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,7 +13,6 @@
             padding: 0;
             height: 100%;
             overflow-x: hidden;
-            /* 가로 스크롤 방지 */
             font-family: Arial, sans-serif;
         }
 
@@ -144,6 +144,14 @@
         .dropdown-menu a:hover {
             background-color: #f4f4f4;
         }
+        .color-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+            /* Space between color indicator and text */
+        }
 
         .container {
             display: flex;
@@ -206,14 +214,6 @@
             font-size: 18px;
         }
 
-        .color-indicator {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            margin-right: 8px;
-            /* Space between color indicator and text */
-        }
 
 
         .tabs {
@@ -248,7 +248,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="Logo.png">
+            <img src="Img/Logo.png">
         </div>
         <nav>
             <button id="messages-btn" class="nav-btn">Message</button>
@@ -298,6 +298,8 @@
                 <div class="header">
                     <h1>환자 EHR</h1>
                     <p>환자 ID: 12345 | 이름: 홍길동 | 생년월일: 1980-01-01 | 성별: 남성</p>
+                     <!-- 수정 버튼 추가 -->
+                    <button id="edit-btn" class="nav-btn" style="margin-top: 10px;">수정</button>
                 </div>
                 <div class="section">
                     <h2>기본 정보</h2>
